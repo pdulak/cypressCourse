@@ -1,0 +1,23 @@
+{
+  "name": "cypress-course",
+  "version": "1.0.0",
+  "description": "Cypress course materials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdulak/cypressCourse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdulak/cypressCourse/issues"
+  },
+  "homepage": "https://github.com/pdulak/cypressCourse#readme",
+  "devDependencies": {
+    "cypress": "^12.0.1",
+    "@faker-js/faker": "~7.6.0"
+  }
+}

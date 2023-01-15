@@ -4,6 +4,7 @@ import BasicauthPage from "../page-objects/basicauthPage";
 import FormPage from "../page-objects/formPage";
 import KeypressesPage from "../page-objects/keypressesPage";
 import DraganddropPage from "../page-objects/draganddropPage";
+import AddRemovePage from "../page-objects/addRemovePage";
 
 describe('Module 7 - Homework',() => {
     const homePage = new HomePage();
@@ -53,5 +54,14 @@ describe('Module 7 - Homework',() => {
         const ddPage = new DraganddropPage();
         ddPage.dragToTheSamePlace();
         ddPage.dragToTheOtherColumn();
+    })
+
+    it('should handle "add button" area properly', () => {
+        homePage.clickAddRemoveTab();
+
+        const addRemovePage = new AddRemovePage();
+        addRemovePage.checkIfEmptyArea();
+        addRemovePage.addThreeButtons();
+        addRemovePage.addAndRemoveButtons();
     })
 })

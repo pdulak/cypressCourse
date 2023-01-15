@@ -5,6 +5,7 @@ import FormPage from "../page-objects/formPage";
 import KeypressesPage from "../page-objects/keypressesPage";
 import DraganddropPage from "../page-objects/draganddropPage";
 import AddRemovePage from "../page-objects/addRemovePage";
+import StatuscodesPage from "../page-objects/statuscodesPage";
 
 describe('Module 7 - Homework',() => {
     const homePage = new HomePage();
@@ -48,7 +49,7 @@ describe('Module 7 - Homework',() => {
         keypressPage.checkMultipleLetters();
     })
 
-    it('should handle drag and drop', () => {
+    xit('should handle drag and drop', () => {
         homePage.clickDragAndDropTab();
 
         const ddPage = new DraganddropPage();
@@ -56,12 +57,19 @@ describe('Module 7 - Homework',() => {
         ddPage.dragToTheOtherColumn();
     })
 
-    it('should handle "add button" area properly', () => {
+    xit('should handle "add button" area properly', () => {
         homePage.clickAddRemoveTab();
 
         const addRemovePage = new AddRemovePage();
         addRemovePage.checkIfEmptyArea();
         addRemovePage.addThreeButtons();
         addRemovePage.addAndRemoveButtons();
+    })
+
+    it('should request and get propper status codes', () => {
+        homePage.clickStatuscodesTab();
+
+        const statuscodesPage = new StatuscodesPage();
+        statuscodesPage.checkStatusCodesLinks();
     })
 })

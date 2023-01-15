@@ -6,6 +6,7 @@ import KeyPressesPage from "../page-objects/keyPressesPage";
 import DragAndDropPage from "../page-objects/dragAndDropPage";
 import AddRemovePage from "../page-objects/addRemovePage";
 import StatusCodesPage from "../page-objects/statusCodesPage";
+import IframePage from "../page-objects/iframePage";
 
 describe('Module 7 - Homework',() => {
     const homePage = new HomePage();
@@ -72,4 +73,12 @@ describe('Module 7 - Homework',() => {
         const statuscodesPage = new StatusCodesPage();
         statuscodesPage.checkStatusCodesLinks();
     })
+
+    it('should handle buttons in iFrame', () => {
+       homePage.clickIframeTab();
+
+       const iframePage = new IframePage();
+       iframePage.clickFirstButton();
+       iframePage.clickSecondButton();
+    });
 })

@@ -2,6 +2,7 @@ import HomePage from "../page-objects/homePage";
 import DatepickerPage from "../page-objects/datepickerPage";
 import BasicauthPage from "../page-objects/basicauthPage";
 import FormPage from "../page-objects/formPage";
+import KeypressesPage from "../page-objects/keypressesPage";
 
 describe('Module 7 - Homework',() => {
     const homePage = new HomePage();
@@ -34,5 +35,14 @@ describe('Module 7 - Homework',() => {
       formPage.checkEmptyFirstname();
       formPage.checkEmptyLastname();
       formPage.checkFilledForm();
+    })
+
+    it('should handle keypress input properly', () => {
+        homePage.clickKeypressesTab();
+
+        const keypressPage = new KeypressesPage();
+        keypressPage.checkEmptyField();
+        keypressPage.checkSingleLetter();
+        keypressPage.checkMultipleLetters();
     })
 })

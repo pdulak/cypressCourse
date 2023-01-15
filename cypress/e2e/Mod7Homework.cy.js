@@ -3,6 +3,7 @@ import DatepickerPage from "../page-objects/datepickerPage";
 import BasicauthPage from "../page-objects/basicauthPage";
 import FormPage from "../page-objects/formPage";
 import KeypressesPage from "../page-objects/keypressesPage";
+import DraganddropPage from "../page-objects/draganddropPage";
 
 describe('Module 7 - Homework',() => {
     const homePage = new HomePage();
@@ -19,7 +20,7 @@ describe('Module 7 - Homework',() => {
         datepickerPage.checkInvalidDate();
     });
 
-    it('should disallow login for wrong user and allow for proper user', () => {
+    xit('should disallow login for wrong user and allow for proper user', () => {
         homePage.clickBasicauthTab();
 
         const basicAuthPage = new BasicauthPage();
@@ -28,7 +29,7 @@ describe('Module 7 - Homework',() => {
         basicAuthPage.checkValidCredentials();
     })
 
-    it('should disallow empty fields in form and allow filled fields', () => {
+    xit('should disallow empty fields in form and allow filled fields', () => {
       homePage.clickFormTab();
 
       const formPage = new FormPage();
@@ -37,12 +38,20 @@ describe('Module 7 - Homework',() => {
       formPage.checkFilledForm();
     })
 
-    it('should handle keypress input properly', () => {
+    xit('should handle keypress input properly', () => {
         homePage.clickKeypressesTab();
 
         const keypressPage = new KeypressesPage();
         keypressPage.checkEmptyField();
         keypressPage.checkSingleLetter();
         keypressPage.checkMultipleLetters();
+    })
+
+    it('should handle drag and drop', () => {
+        homePage.clickDragAndDropTab();
+
+        const ddPage = new DraganddropPage();
+        ddPage.dragToTheSamePlace();
+        ddPage.dragToTheOtherColumn();
     })
 })

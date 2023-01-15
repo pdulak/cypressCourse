@@ -1,6 +1,7 @@
 import HomePage from "../page-objects/homePage";
 import DatepickerPage from "../page-objects/datepickerPage";
 import BasicauthPage from "../page-objects/basicauthPage";
+import FormPage from "../page-objects/formPage";
 
 describe('Module 7 - Homework',() => {
     const homePage = new HomePage();
@@ -24,5 +25,14 @@ describe('Module 7 - Homework',() => {
         basicAuthPage.checkEmptyForm();
         basicAuthPage.checkInvalidCredentials();
         basicAuthPage.checkValidCredentials();
+    })
+
+    it('should disallow empty fields in form and allow filled fields', () => {
+      homePage.clickFormTab();
+
+      const formPage = new FormPage();
+      formPage.checkEmptyFirstname();
+      formPage.checkEmptyLastname();
+      formPage.checkFilledForm();
     })
 })

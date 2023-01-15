@@ -1,11 +1,11 @@
 import HomePage from "../page-objects/homePage";
 import DatepickerPage from "../page-objects/datepickerPage";
-import BasicauthPage from "../page-objects/basicauthPage";
+import BasicAuthPage from "../page-objects/basicAuthPage";
 import FormPage from "../page-objects/formPage";
-import KeypressesPage from "../page-objects/keypressesPage";
-import DraganddropPage from "../page-objects/draganddropPage";
+import KeyPressesPage from "../page-objects/keyPressesPage";
+import DragAndDropPage from "../page-objects/dragAndDropPage";
 import AddRemovePage from "../page-objects/addRemovePage";
-import StatuscodesPage from "../page-objects/statuscodesPage";
+import StatusCodesPage from "../page-objects/statusCodesPage";
 
 describe('Module 7 - Homework',() => {
     const homePage = new HomePage();
@@ -25,7 +25,7 @@ describe('Module 7 - Homework',() => {
     xit('should disallow login for wrong user and allow for proper user', () => {
         homePage.clickBasicauthTab();
 
-        const basicAuthPage = new BasicauthPage();
+        const basicAuthPage = new BasicAuthPage();
         basicAuthPage.checkEmptyForm();
         basicAuthPage.checkInvalidCredentials();
         basicAuthPage.checkValidCredentials();
@@ -43,7 +43,7 @@ describe('Module 7 - Homework',() => {
     xit('should handle keypress input properly', () => {
         homePage.clickKeypressesTab();
 
-        const keypressPage = new KeypressesPage();
+        const keypressPage = new KeyPressesPage();
         keypressPage.checkEmptyField();
         keypressPage.checkSingleLetter();
         keypressPage.checkMultipleLetters();
@@ -52,7 +52,7 @@ describe('Module 7 - Homework',() => {
     xit('should handle drag and drop', () => {
         homePage.clickDragAndDropTab();
 
-        const ddPage = new DraganddropPage();
+        const ddPage = new DragAndDropPage();
         ddPage.dragToTheSamePlace();
         ddPage.dragToTheOtherColumn();
     })
@@ -69,7 +69,7 @@ describe('Module 7 - Homework',() => {
     it('should request and get propper status codes', () => {
         homePage.clickStatuscodesTab();
 
-        const statuscodesPage = new StatuscodesPage();
+        const statuscodesPage = new StatusCodesPage();
         statuscodesPage.checkStatusCodesLinks();
     })
 })

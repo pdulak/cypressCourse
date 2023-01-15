@@ -1,7 +1,7 @@
 const inputField = '#target';
 const resultArea = '#keyPressResult';
 
-class KeypressesPage {
+class KeyPressesPage {
     checkEmptyField() {
         cy.get(inputField).clear();
         cy.get(resultArea).should('contain.text', 'You entered: DELETE');
@@ -18,4 +18,4 @@ class KeypressesPage {
     }
 }
 
-export default KeypressesPage;
+export default KeyPressesPage;

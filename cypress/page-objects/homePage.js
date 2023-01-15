@@ -5,12 +5,12 @@ const checkboxHeader = '#checkbox-header';
 const dropdownListHeader = '#dropdownlist-header';
 const hoversHeader = '#hovers-header';
 const datepickerHeader = '#datepicker-header';
-const basicauthHeader = '#basicauth-header';
+const basicAuthHeader = '#basicauth-header';
 const formHeader = '#form-header';
-const keypressesHeader = '#keypresses-header';
+const keyPressesHeader = '#keypresses-header';
 const ddHeader = '#draganddrop-header';
 const addRemoveHeader = '#addremoveelements-header';
-const statuscodesHeader = '#statuscodes-header';
+const statusCodesHeader = '#statuscodes-header';
 const iframeHeader = '#iframe-header';
 
 class HomePage {
@@ -36,7 +36,7 @@ class HomePage {
     }
 
     clickBasicauthTab() {
-        cy.get(basicauthHeader).click();
+        cy.get(basicAuthHeader).click();
     }
 
     clickFormTab() {
@@ -44,7 +44,7 @@ class HomePage {
     }
 
     clickKeypressesTab() {
-        cy.get(keypressesHeader).click();
+        cy.get(keyPressesHeader).click();
     }
 
     clickDragAndDropTab() {
@@ -56,7 +56,7 @@ class HomePage {
     }
 
     clickStatuscodesTab() {
-        cy.get(statuscodesHeader).click();
+        cy.get(statusCodesHeader).click();
     }
 
     clickIframeTab() {

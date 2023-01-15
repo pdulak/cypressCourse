@@ -4,7 +4,7 @@ const formSubmitButton = '#basicauth-content button';
 const resultArea = '#loginFormMessage';
 const loginResultArea = '#loggedInMessage';
 
-class BasicauthPage {
+class BasicAuthPage {
     checkEmptyForm() {
         cy.get(usernameField).clear();
         cy.get(passField).clear();
@@ -28,4 +28,4 @@ class BasicauthPage {
 
 }
 
-export default BasicauthPage;
+export default BasicAuthPage;

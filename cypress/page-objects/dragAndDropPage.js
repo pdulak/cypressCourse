@@ -2,7 +2,7 @@ const colA = '#column-a';
 const colB = '#column-b';
 const columnsHeadersAll = '.columns header';
 
-class DraganddropPage {
+class DragAndDropPage {
     dragToTheSamePlace() {
         const dataTransfer = new DataTransfer();
 
@@ -32,4 +32,4 @@ class DraganddropPage {
     }
 }
 
-export default DraganddropPage;
+export default DragAndDropPage;

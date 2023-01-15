@@ -1,6 +1,6 @@
 const links = '#statuscodes-content a';
 
-class StatuscodesPage {
+class StatusCodesPage {
     checkStatusCodesLinks() {
         cy.get(links).each((e) => {
             const url = e.attr('href');
@@ -21,4 +21,4 @@ class StatuscodesPage {
     }
 }
 
-export default StatuscodesPage;
+export default StatusCodesPage;

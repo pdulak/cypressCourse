@@ -23,7 +23,7 @@ describe('Module 7 - Homework',() => {
         datepickerPage.checkInvalidDate();
     });
 
-    xit('should disallow login for wrong user and allow for proper user', () => {
+    it('should disallow login for wrong user and allow for proper user', () => {
         homePage.clickBasicauthTab();
 
         const basicAuthPage = new BasicAuthPage();
@@ -32,7 +32,7 @@ describe('Module 7 - Homework',() => {
         basicAuthPage.checkValidCredentials();
     })
 
-    xit('should disallow empty fields in form and allow filled fields', () => {
+    it('should disallow empty fields in form and allow filled fields', () => {
       homePage.clickFormTab();
 
       const formPage = new FormPage();
@@ -41,7 +41,7 @@ describe('Module 7 - Homework',() => {
       formPage.checkFilledForm();
     })
 
-    xit('should handle keypress input properly', () => {
+    it('should handle keypress input properly', () => {
         homePage.clickKeypressesTab();
 
         const keypressPage = new KeyPressesPage();
@@ -50,7 +50,7 @@ describe('Module 7 - Homework',() => {
         keypressPage.checkMultipleLetters();
     })
 
-    xit('should handle drag and drop', () => {
+    it('should handle drag and drop', () => {
         homePage.clickDragAndDropTab();
 
         const ddPage = new DragAndDropPage();
@@ -58,7 +58,7 @@ describe('Module 7 - Homework',() => {
         ddPage.dragToTheOtherColumn();
     })
 
-    xit('should handle "add button" area properly', () => {
+    it('should handle "add button" area properly', () => {
         homePage.clickAddRemoveTab();
 
         const addRemovePage = new AddRemovePage();

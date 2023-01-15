@@ -5,4 +5,4 @@
 
 Go to the terminal in the project dir and run:
 
-``` ./node_modules/.bin/cypress open```
+```cypress open```

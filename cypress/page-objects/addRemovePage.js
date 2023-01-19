@@ -7,6 +7,7 @@ class AddRemovePage {
     }
 
     addThreeButtons() {
+        //w tym miejscu zamiast 3x robic click() to zrób pętle FOR, która będzie ilość wywołań brała z parametru wywołania :)
         cy.get(addButton).click().click().click();
         cy.get(elementsAreaButtons).should('have.length', 3);
     }

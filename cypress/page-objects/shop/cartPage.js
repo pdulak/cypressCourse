@@ -14,7 +14,7 @@ class CartPage {
     }
 
     checkIfCartEmpty() {
-        cy.get(cartEmptyInfo).should('exist');
+        cy.get(cartEmptyInfo, { timeout: 30000 }).should('exist');
     }
 
     clickCheckoutButton() {

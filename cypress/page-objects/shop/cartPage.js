@@ -3,6 +3,7 @@ import { products } from "./homePage";
 const productName = ".product-name";
 const removeIcon = "a.remove[data-product_id='[PRODUCT_ID']";
 const cartEmptyInfo = "p.cart-empty.woocommerce-info";
+const checkoutButton = ".wc-proceed-to-checkout a";
 
 class CartPage {
 
@@ -32,6 +33,10 @@ class CartPage {
 
     checkIfCartEmpty() {
         cy.get(cartEmptyInfo).should('exist');
+    }
+
+    clickCheckoutButton() {
+        cy.get(checkoutButton).click();
     }
 
 }

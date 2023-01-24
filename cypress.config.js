@@ -5,9 +5,7 @@ module.exports = defineConfig({
   viewportWidth: 1600,
   e2e: {
     // baseUrl: 'https://fabrykatestow.pl',
-    baseUrl: 'https://simpletestsite.fabrykatestow.pl',
-    setupNodeEvents(on, config) {
-
-    }
-  }
+    // baseUrl: 'https://simpletestsite.fabrykatestow.pl',
+    baseUrl: 'https://tapsshop.pl',
+  },
 });

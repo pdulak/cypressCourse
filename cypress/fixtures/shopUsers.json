@@ -1,0 +1,10 @@
+{
+  "correct": {
+    "email": "wacog70401@tinkmail.net",
+    "password": "Lk*3Q9&am3zL"
+  },
+  "incorrect": {
+    "email": "foo@foo.com",
+    "password": "bar"
+  }
+}

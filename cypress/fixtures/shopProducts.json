@@ -1,0 +1,14 @@
+{
+  "hoodieWithZipper" : {
+    "name" : "Hoodie with Zipper",
+    "id" : 51
+  },
+  "sunglasses" : {
+    "name" : "Sunglasses",
+    "id" : 49
+  },
+  "polo" : {
+    "name" : "Polo",
+    "id" : 53
+  }
+}

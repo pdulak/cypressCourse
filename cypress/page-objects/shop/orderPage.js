@@ -11,6 +11,7 @@ const emailField = "#billing_email";
 const finishOrderButton = "#place_order";
 const countryDropdownPoland = "Polska";
 const orderNumberArea = "li.woocommerce-order-overview__order.order";
+const productNameArea = "td.woocommerce-table__product-name.product-name";
 
 class OrderPage {
 
@@ -31,6 +32,10 @@ class OrderPage {
 
     checkOrderFinished(){
          cy.get(orderNumberArea, {timeout: 30000}).should("contain", "Numer zamówienia:");
+    }
+
+    checkIfProductOnOrderSummary(product) {
+        cy.get(productNameArea, {timeout: 30000}).should("contain", product.name);
     }
 
 }

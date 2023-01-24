@@ -10,8 +10,13 @@ describe('Mod 8 tests', () => {
     const cartPage = new CartPage();
     const orderPage = new OrderPage();
 
-    before(function(){
+    //
+    // had to use 'beforeEach' instead of 'before' because 'this' context is cleaned between tests and I don't want to use
+    // deep Mocha context (storing in 'Cypress' object)
+    //
+    beforeEach(function(){
        cy.fixture('shopUsers.json').as('userData');
+       cy.fixture('shopProducts.json').as('productData');
     });
 
     xit('should login successfully using proper credentials', function(){
@@ -31,24 +36,29 @@ describe('Mod 8 tests', () => {
         myAccountPage.checkLoginErrorVisibility();
     });
 
-    xit('Should go successfully through shopping cart add and remove actions', function(){
+    it('Should go successfully through shopping cart add and remove actions', function(){
+        const productToTest = this.productData.hoodieWithZipper;
+
         homePage.visit();
-        homePage.addHoodieToCart();
+        homePage.addProductToCart(productToTest);
         homePage.clickGoToCartFromProductButton();
-        cartPage.checkIfHoodieInCart();
-        cartPage.removeHoodkieFromCart();
+        cartPage.checkIfProductInCart(productToTest);
+        cartPage.removeProductFromCart(productToTest);
         cartPage.checkIfCartEmpty();
     });
 
     it('Should process order successfully', function(){
+        const productToTest = this.productData.hoodieWithZipper;
+
         homePage.visit();
-        homePage.addHoodieToCart();
+        homePage.addProductToCart(productToTest);
         homePage.clickGoToCartFromProductButton();
-        cartPage.checkIfHoodieInCart();
+        cartPage.checkIfProductInCart(productToTest);
         cartPage.clickCheckoutButton();
         orderPage.fillAllRequiredFields();
         orderPage.clickFinishOrder();
         orderPage.checkOrderFinished();
+        orderPage.checkIfProductOnOrderSummary(productToTest);
     })
 
 })

@@ -7,6 +7,3 @@ workflows:
       - cypress/run:
           install-command: npm i
           store_artifacts: true
-          parallel: true
-          parallelism: 3
-          group: 2 machines

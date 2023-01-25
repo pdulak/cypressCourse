@@ -5,5 +5,5 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          install-command: npm ci
+          install-command: npm i
           store_artifacts: true

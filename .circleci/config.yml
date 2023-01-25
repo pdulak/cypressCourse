@@ -4,8 +4,10 @@ orbs:
 workflows:
   build:
     jobs:
+      - cypress/install
       - cypress/run:
-          install-command: npm i
+          requires:
+            - cypress/install
           store_artifacts: true
           parallel: true
           parallelism: 3

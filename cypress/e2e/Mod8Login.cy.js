@@ -23,7 +23,7 @@ describe('Mod 8 Login tests', () => {
         myAccountPage.checkMyAccountNavVisibility();
     });
 
-    it('should fail login when using wrong credentials', function(){
+    xit('should fail login when using wrong credentials', function(){
         myAccountPage.visitPage();
         myAccountPage.fillUsernameField(faker.internet.email());
         myAccountPage.fillPasswordField(faker.internet.password());

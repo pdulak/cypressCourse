@@ -4,11 +4,13 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/install
       - cypress/run:
-          requires:
-            - cypress/install
+          name: "Test Cart"
+          install-command: npm i
           store_artifacts: true
-          parallel: true
-          parallelism: 3
-          group: 2 machines
+          spec: cypress/e2e/Mod8.cy.js
+      - cypress/run:
+          name: "Test Login"
+          install-command: npm i
+          store_artifacts: true
+          spec: cypress/e2e/Mod8Login.cy.js
